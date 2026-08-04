@@ -25,7 +25,8 @@ const ProductHero: React.FC<ProductHeroProps> = ({ title, description, bannerIma
             alt={img.original.title ?? `Banner ${idx + 1}`}
             width={720}
             height={480}
-            className="rounded-lg"
+            className="rounded-lg object-cover"
+            priority={idx === 0}
           />
         ))}
       </div>

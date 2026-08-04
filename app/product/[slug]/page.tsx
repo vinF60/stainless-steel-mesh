@@ -1,10 +1,10 @@
 import fs from 'fs';
 import path from 'path';
 import { Metadata } from 'next';
-import { NextSeo } from 'next-seo';
 import ProductHero from '@/components/ProductHero';
 import FeatureList from '@/components/FeatureList';
 import FAQAccordion from '@/components/FAQAccordion';
+import SeoHead from '@/components/SeoHead';
 
 // Generate metadata for each product page
 export const generateMetadata = async ({ params }: { params: { slug: string } }): Promise<Metadata> => {
@@ -29,7 +29,10 @@ export const generateMetadata = async ({ params }: { params: { slug: string } })
   };
 };
 
-export default async function ProductPage({ params }: { params: { slug: string } }) {
+export default async function ProductPage({ params }: { params: Promise<{ slug: string }> }) {
+  // Resolve slug param
+  const { slug } = await params;
+
   // Load product data (static for demo)
   const dataPath = path.join(process.cwd(), 'data', 'product.json');
   const raw = fs.readFileSync(dataPath, 'utf-8');
@@ -51,34 +54,14 @@ export default async function ProductPage({ params }: { params: { slug: string }
       "priceCurrency": "USD",
       "price": "0",
       "availability": "https://schema.org/InStock",
-      "url": `https://yourdomain.com/product/${params.slug}.html`,
+      "url": `https://yourdomain.com/product/${slug}.html`,
     },
     "faq": data.FAQ,
   };
 
   return (
     <>
-      <NextSeo
-        title={data.head.metaTitle}
-        description={data.head.metaDescription}
-        openGraph={{
-          title: data.head.metaTitle,
-          description: data.head.metaDescription,
-          images: data.bannerImages?.map((img: any) => ({ url: img.original.data })),
-        }}
-        twitter={{
-          cardType: 'summary_large_image',
-          title: data.head.metaTitle,
-          description: data.head.metaDescription,
-        }}
-        additionalMetaTags={[
-          { name: 'keywords', content: data.head.metaKeywords },
-          { name: 'robots', content: 'index, follow' },
-          { property: 'og:type', content: 'product' },
-          { property: 'og:url', content: `https://yourdomain.com/product/${params.slug}.html` },
-        ]}
-        canonical={`https://yourdomain.com/product/${params.slug}.html`}
-      />
+      <SeoHead data={data} params={{ slug }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -101,3 +84,4 @@ export default async function ProductPage({ params }: { params: { slug: string }
     </>
   );
 }
+
