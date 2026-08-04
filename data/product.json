@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "message": "product",
+  "data": {
+    "_id": "6a71853bfd8af33dd4daaeee",
+    "head": {
+      "metaTitle": "Stainless Steel Wire Mesh Manufacturer & Supplier | Ss304 Ss316 M",
+      "metaDescription": "Buy Premium Stainless Steel Wire Mesh In Ss304, Ss316 & Ss316l Grades. Manufacturer, Supplier And Exporter Offering Corrosion Resistant Industrial Wire Mesh For Filtration, Screening And Construction.",
+      "metaKeywords": "stainless steel wire mesh, ss wire mesh, ss304 wire mesh, ss316 wire mesh, stainless steel mesh manufacturer, wire mesh supplier, industrial wire mesh, filtration mesh, woven wire mesh, stainless steel filter mesh, metal mesh exporter, wire cloth, industrial mesh, welded wire mesh, dutch weave mesh"
+    },
+    "productTitle": "Stainless Steel Wire Mesh",
+    "productDescriptionHeading": "Premium Stainless Steel Wire Mesh Manufacturer & Exporter",
+    "productDescription": "<p>Premium Stainless Steel Wire Mesh</p><p><br></p><p>Prime Industrial Metals manufactures high-quality Stainless Steel Wire Mesh suitable for filtration, screening, protection, construction, food processing, pharmaceutical, petrochemical and industrial applications.</p><p><br></p><p>FEATURES</p><p><br></p><p>• Corrosion resistant</p><p>• High tensile strength</p><p>• Excellent durability</p><p>• Uniform mesh opening</p><p>• Heat resistant</p><p>• Available in custom sizes</p><p><br></p><p>APPLICATIONS</p><p><br></p><p>• Industrial Filtration</p><p>• Chemical Plants</p><p>• Food Processing Industry</p><p>• Pharmaceutical Industry</p><p>• Mining</p><p>• Construction</p><p>• Automotive</p><p><br></p><p>SPECIFICATIONS</p><p><br></p><p>Material: SS304, SS304L, SS316, SS316L</p><p>Wire Diameter: 0.03 mm – 5 mm</p><p>Mesh Size: 2 Mesh – 500 Mesh</p><p>Weave Type: Plain Weave, Twill Weave, Dutch Weave</p><p>Roll Width: 0.5 m – 2 m</p><p>Standard Roll Length: 30 m</p><p><br></p><p>WHY CHOOSE US</p><p><br></p><p>• ISO quality manufacturing</p><p>• Custom sizes available</p><p>• Bulk order support</p><p>• Fast domestic and international shipping</p><p>• OEM & ODM manufacturing</p><p>• Competitive factory pricing</p><p><br></p><p>Custom manufacturing, OEM production and bulk export orders are accepted worldwide. Our Stainless Steel Wire Mesh is widely used in filtration systems, construction projects, pharmaceutical plants, food processing facilities, mining operations, petrochemical industries and industrial screening applications.</p>",
+    "productDetails": [
+      {
+        "productTitle": "Plain Weave Stainless Steel Wire Mesh",
+        "subProductDescription": "Plain Weave Stainless Steel Wire Mesh is the most widely used woven mesh for industrial filtration, screening and protection. Manufactured in SS304, SS304L, SS316 and SS316L grades, it offers excellent corrosion resistance, uniform openings, high tensile strength and long service life. Suitable for pharmaceutical, food processing, mining, construction and chemical industries. Available in custom mesh sizes, wire diameters and roll widths.",
+        "productCode": "24477802",
+        "productBannerImage": {
+          "original": {
+            "uuid": "91650cd5-499b-4383-9672-28e2bb03d155",
+            "title": "Plain Weave Stainless Steel Wire Mesh",
+            "originalname": "cropped-image1785824350478.jpeg",
+            "safeOriginalname": "cropped-image1785824350478.jpeg",
+            "data": "https://pipingproject.s3.ap-south-1.amazonaws.com/piplineProductProduction/cropped-image1785824350478_1785824516570.jpeg",
+            "contentType": "image/jpeg"
+          }
+        },
+        "_id": "6a71853bfd8af33dd4daaeef"
+      }
+    ],
+    "bannerImages": [
+      {
+        "original": {
+          "uuid": "d7059e23-a592-42b6-81e7-e98f14feec02",
+          "title": "Cropped Image1785823664741",
+          "originalname": "cropped-image1785823664741.jpeg",
+          "safeOriginalname": "cropped-image1785823664741.jpeg",
+          "data": "https://pipingproject.s3.ap-south-1.amazonaws.com/piplineProductProduction/cropped-image1785823664741_1785823703573.jpeg",
+          "contentType": "image/jpeg"
+        }
+      }
+    ],
+    "FAQ": [
+      {
+        "question": "What grades of stainless steel wire mesh are available?",
+        "answer": "We manufacture SS304, SS304L, SS316 and SS316L wire mesh in various mesh sizes and wire diameters."
+      }
+    ]
+  }
+}
