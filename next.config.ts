@@ -10,6 +10,20 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/product',
+        destination: '/product/stainless-steel-wire-mesh-1888.html',
+        permanent: true,
+      },
+      {
+        source: '/product/',
+        destination: '/product/stainless-steel-wire-mesh-1888.html',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
