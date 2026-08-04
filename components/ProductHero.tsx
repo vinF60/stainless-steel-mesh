@@ -22,7 +22,7 @@ const ProductHero: React.FC<ProductHeroProps> = ({ title, description, bannerIma
           <Image
             key={idx}
             src={img.original.data}
-            alt={img.original.title ?? `Banner ${idx + 1}`}
+            alt={img.original.title ?? `Stainless Steel Wire Mesh ${params.slug}`}
             width={720}
             height={480}
             className="rounded-lg object-cover"
