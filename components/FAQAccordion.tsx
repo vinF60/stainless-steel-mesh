@@ -18,24 +18,38 @@ const FAQAccordion: React.FC<FAQAccordionProps> = ({ faq }) => {
   };
 
   return (
-    <section className="mt-12">
-      <h2 className="text-2xl font-semibold mb-4">Frequently Asked Questions</h2>
-      <div className="accordion">
-        {faq.map((item, idx) => (
-          <div
-            key={idx}
-            className={`accordion-item ${openIndex === idx ? 'active' : ''}`}
+    <div className="accordion space-y-3 my-6">
+      {faq.map((item, idx) => (
+        <div
+          key={idx}
+          className={`accordion-item border border-slate-200 rounded-lg overflow-hidden transition-colors ${
+            openIndex === idx ? 'bg-slate-50 border-blue-200' : 'bg-white'
+          }`}
+          itemScope
+          itemProp="mainEntity"
+          itemType="https://schema.org/Question"
+        >
+          <h3
+            className="accordion-header px-5 py-4 font-semibold text-slate-800 cursor-pointer flex justify-between items-center select-none"
+            itemProp="name"
+            onClick={() => toggle(idx)}
           >
-            <div className="accordion-header" onClick={() => toggle(idx)}>
-              {item.question}
+            <span>{item.question}</span>
+            <span className="text-xl text-slate-500">{openIndex === idx ? '−' : '+'}</span>
+          </h3>
+          {openIndex === idx && (
+            <div
+              className="accordion-content px-5 pb-4 text-slate-600 border-t border-slate-100 pt-3"
+              itemScope
+              itemProp="acceptedAnswer"
+              itemType="https://schema.org/Answer"
+            >
+              <p itemProp="text">{item.answer}</p>
             </div>
-            <div className="accordion-content" itemScope itemType="https://schema.org/FAQPage">
-              <p itemProp="answerText">{item.answer}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
+          )}
+        </div>
+      ))}
+    </div>
   );
 };
 

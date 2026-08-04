@@ -2,8 +2,7 @@
  * next-sitemap configuration
  */
 module.exports = {
-  siteUrl: "https://yourdomain.com",
+  siteUrl: process.env.SITE_URL || "https://stainless-steel-mesh-one.vercel.app",
   generateRobotsTxt: true,
-  // optional: changefreq, priority etc.
-  // outDir: "public",
+  generateIndexSitemap: false,
 };

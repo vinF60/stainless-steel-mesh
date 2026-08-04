@@ -16,19 +16,24 @@ const ProductHero: React.FC<ProductHeroProps> = ({ title, description, bannerIma
   return (
     <section className="hero">
       <h1 className="text-4xl font-bold mb-4">{title}</h1>
-      <p className="mb-6 text-lg">{description}</p>
-      <div className="flex gap-4 overflow-x-auto justify-center">
-        {bannerImages.map((img, idx) => (
-          <Image
-            key={idx}
-            src={img.original.data}
-            alt={img.original.title ?? `Stainless Steel Wire Mesh ${params.slug}`}
-            width={720}
-            height={480}
-            className="rounded-lg object-cover"
-            priority={idx === 0}
-          />
-        ))}
+      <p className="mb-6 text-lg text-gray-700">{description}</p>
+      <div className="flex gap-4 overflow-x-auto justify-center my-6">
+        {bannerImages.map((img, idx) => {
+          const altText = (img.original.title && !img.original.title.toLowerCase().startsWith('cropped'))
+            ? img.original.title
+            : `${title} SS304 SS316 Industrial Woven Wire Mesh Roll - Image ${idx + 1}`;
+          return (
+            <Image
+              key={idx}
+              src={img.original.data}
+              alt={altText}
+              width={720}
+              height={480}
+              className="rounded-lg object-cover shadow-md"
+              priority={idx === 0}
+            />
+          );
+        })}
       </div>
     </section>
   );
